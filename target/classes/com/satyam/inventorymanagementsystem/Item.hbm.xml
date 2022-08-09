@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="com.satyam.inventorymanagementsystem.Item" table="items" schema="system">
+    
+    <id name="name" column="name" length="100">
+        <generator class="assigned"/>
+        
+    </id>
+    <property name="quantity" column="quantity" not-null="true"/>
+     <property name="price" column="price" not-null="true"/>
+    
+    
+    </class>
+    
+    </hibernate-mapping>

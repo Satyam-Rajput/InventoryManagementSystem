@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="com.satyam.inventorymanagementsystem.Patient" table="patients" schema="system">
+    
+        
+    <id name="id" column="id" >
+        <generator class="increment"/>
+        
+    </id>
+    <property name="date" column="date" not-null="true"/>
+    <property name="total" column="total" not-null="true"/>
+     <property name="name" column="name" not-null="true"/>
+    
+    <list name="medicines" cascade="all">
+        <key column="patient_id"></key>
+        <index column="type"/>
+        <one-to-many class="com.satyam.inventorymanagementsystem.Medicine"/>
+        
+        
+    </list>
+    </class>
+    
+    
+   
+    
+    </hibernate-mapping>

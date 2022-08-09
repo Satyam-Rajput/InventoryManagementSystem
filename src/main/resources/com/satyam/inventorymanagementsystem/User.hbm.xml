@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="com.satyam.inventorymanagementsystem.User" table="users" schema="system">
+    
+    <id name="username" column="username" length="100">
+        <generator class="assigned"/>
+        
+    </id>
+    <property name="password" column="password" not-null="true"/>
+    <property name="accessType" column="accessType" not-null="true"/>
+    <property name="lastLogin" column="last_login" />
+    
+    </class>
+    
+    </hibernate-mapping>
